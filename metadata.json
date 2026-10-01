@@ -1,0 +1,6 @@
+{
+  "name": "Nossa História — Uma Experiência Digital",
+  "description": "Um lugar onde todas as memórias, músicas, cartas, fotografias, histórias e sonhos de um casal foram transformados em uma experiência digital.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

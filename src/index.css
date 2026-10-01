@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-hand: 'Caveat', cursive;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #100F0E;
+    color: #F3EFEA;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: var(--font-serif);
+  }
+
+  .font-handwriting {
+    font-family: var(--font-hand);
+  }
+
+  .font-vintage-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Washi tape effect */
+.washi-tape {
+  position: absolute;
+  height: 22px;
+  background: rgba(245, 237, 224, 0.45);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(2px);
+  border-left: 2px dashed rgba(200, 180, 150, 0.4);
+  border-right: 2px dashed rgba(200, 180, 150, 0.4);
+  z-index: 20;
+}
+
+/* Vintage paper texture overlay */
+.paper-texture {
+  background-color: #161413;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Vintage polaroid style */
+.polaroid-frame {
+  background: #FDFBF7;
+  color: #1C1917;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.polaroid-frame:hover {
+  box-shadow: 0 20px 35px -5px rgba(0, 0, 0, 0.7);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #100F0E;
+}
+::-webkit-scrollbar-thumb {
+  background: #2C2623;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #4A1521;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
